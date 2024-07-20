@@ -6,11 +6,14 @@ import re
 import matplotlib.pyplot as plt
 import streamlit as st
 
+# Retrieve the API key from Streamlit secrets
+openai_api_key = st.secrets["openai"]["api_key"]
+
+# Initialize OpenAI client
 client = openai.OpenAI(
-    api_key="8d024f37fbdd2166941276baf3e2796851e085a916b9df97e3aeaccff0516040",
+    api_key=openai_api_key,
     base_url="https://api.together.xyz/v1",
 )
-
 # Function to extract tables from PDF
 def extract_tables_from_pdf(pdf_path):
     tables = []
