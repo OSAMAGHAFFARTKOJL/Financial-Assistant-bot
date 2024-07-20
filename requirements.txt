@@ -1,0 +1,6 @@
+openai
+pdfplumber
+pandas
+matplotlib
+streamlit
+
